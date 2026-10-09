@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: ankane/pgvector:latest
+    container_name: smartpass_db
+    restart: always
+    environment:
+      POSTGRES_USER: smartpass_admin
+      POSTGRES_PASSWORD: supersecretpassword
+      POSTGRES_DB: smartpass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

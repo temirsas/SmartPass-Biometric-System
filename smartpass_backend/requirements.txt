@@ -1,0 +1,8 @@
+fastapi==0.110.1
+uvicorn==0.29.0
+sqlalchemy==2.0.29
+psycopg[binary]
+pgvector
+python-dotenv==1.0.1
+pytest
+httpx
